@@ -33,8 +33,13 @@ li {
 /* header */
 header {
   padding: 10px 0px;
-  /* position: fixed;
-  z-index: 1000; */
+  width: 100%;
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
 }
 header .container {
   display: flex;
@@ -121,6 +126,7 @@ header .container .auth-btn a:hover {
 }
 .hero-page .container p {
   font-size: 18px;
+  padding-bottom: 15px;
 }
 .hero-page .container a {
   padding: 15px 25px;
@@ -135,73 +141,217 @@ header .container .auth-btn a:hover {
   color: var(--primary);
 }
 /* about section */
-.about-us{
-    padding: 60px 0px;
+.about-us {
+  padding: 60px 0px;
 }
-.about-us .container .top-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 30px;
+.about-us .container .top-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 30px;
 }
-.about-us .container .top-text h2{
-    color: var(--dark);
-    font-size: 35px;
-    font-weight: 500;
+.about-us .container .top-text h2 {
+  color: var(--dark);
+  font-size: 35px;
+  font-weight: 500;
 }
-.about-us .container .top-text p{
-    color: var(--light-grey);
-    font-size: 19px;
+.about-us .container .top-text p {
+  color: var(--light-grey);
+  font-size: 19px;
 }
-.about-us .container .img-and-text{
-    display: flex;
-    gap: 20px;
-    color: var(--dark);
-    font-size: 17px;
+.about-us .container .img-and-text {
+  display: flex;
+  gap: 20px;
+  color: var(--dark);
+  font-size: 17px;
 }
-.about-us .container .img-and-text .about-image{
-    width: 50%;
+.about-us .container .img-and-text .about-image {
+  width: 50%;
 }
-.about-us .container .img-and-text .about-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.about-us .container .img-and-text .about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.about-us .container .img-and-text .text{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 50%;
+.about-us .container .img-and-text .text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
 }
-.about-us .container .img-and-text .text p span{
-    font-weight: bold;
+.about-us .container .img-and-text .text p span {
+  font-weight: bold;
 }
-.about-us .container .img-and-text .text div p span{
-    font-style: italic;
+.about-us .container .img-and-text .text div p span {
+  font-style: italic;
 }
 /* appointment step section */
-.appointment-section{
-    padding: 60px 0px;
-    background-color: var(--light);
+.appointment-section {
+  padding: 60px 0px;
+  background-color: var(--light);
 }
-.appointment-section .top-text{
+.appointment-section .container .top-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.appointment-section .container .top-text h2 {
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 29px;
+}
+.appointment-section .container .top-text h2 span {
+  font-weight: bold;
+}
+.appointment-section .container .top-text p {
+  color: var(--light-grey);
+  font-size: 19px;
+}
+.appointment-section .container .card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.appointment-section .container .card-container .card {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 30px;
+}
+.appointment-section .container .card-container .card .icon {
+  margin-bottom: 10px;
+}
+.appointment-section .container .card-container .card .icon-mid {
+  margin: 30px 0px 30px 0;
+}
+.appointment-section .container .card-container .card .icon-mid h4,
+.appointment-section .container .card-container .card .icon-mid p {
+  margin-top: -30px;
+}
+.appointment-section .container .card-container .card h4 {
+  color: var(--primary);
+  font-size: 22px;
+  font-weight: 500;
+}
+.appointment-section .container .card-container .card p {
+  color: var(--light-grey);
+  font-size: 15px;
+}
+.appointment-section .container .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appointment-section .container .btn .find-doctor-btn {
+  padding: 12px 30px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--primary);
+}
+.appointment-section .container .btn .find-doctor-btn:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+/* most contact doctors */
+.doctors {
+  padding: 60px 0px;
+}
+.doctors .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.doctors .container .top-text {
+  text-align: center;
+}
+.doctors .container .top-text h2 {
+  color: var(--dark);
+  font-size: 39px;
+  font-weight: 500;
+}
+.doctors .container .top-text P {
+  color: var(--dark-grey);
+  font-size: 20px;
+}
+.doctors .container .doctors-card-container{
     display: flex;
-    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* margin-bottom: 50px; */
+}
+.doctors .container .doctors-card-container li{
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
-.appointment-section .top-text h2{
+.doctors .container .doctors-card-container li .doctor-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.doctors .container .doctors-card-container li .doctor-details{
+    padding: 20px;
+}
+.doctors .container .doctors-card-container li .doctor-details .title{
+    color: var(--dark-grey);
+    font-weight: 400;
+}
+.doctors .container .doctors-card-container li .doctor-details .name{
     color: var(--dark);
     font-weight: 500;
-    font-size: 29px;
+    margin-bottom: 13px;
 }
-.appointment-section .top-text h2 span{
-    font-weight: bold;
-}
-.appointment-section .top-text p{
+.doctors .container .doctors-card-container li .doctor-details p{
     color: var(--light-grey);
-    font-size: 19px;
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+.doctors .container .doctors-card-container li .doctor-details div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #aa003c;
+}
+.doctors .container .doctors-card-container li .doctor-details div p{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #1e9dc4;
+}
+.extra-space{
+    padding: 12px;
+}
+.doctors .container .doctors-card-container li .views-and-book-btn{
+    border-top: 1px solid var(--light-grey);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.doctors .container .doctors-card-container li .views-and-book-btn .views{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding-left: 20px;
 }
