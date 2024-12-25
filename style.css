@@ -39,7 +39,6 @@ header {
   top: 0;
   z-index: 500;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
 }
 header .container {
   display: flex;
@@ -166,9 +165,11 @@ header .container .auth-btn a:hover {
   gap: 20px;
   color: var(--dark);
   font-size: 17px;
+  flex-wrap: wrap;
 }
 .about-us .container .img-and-text .about-image {
   width: 50%;
+  flex: 1 1 300px;
 }
 .about-us .container .img-and-text .about-image img {
   width: 100%;
@@ -180,6 +181,7 @@ header .container .auth-btn a:hover {
   flex-direction: column;
   gap: 15px;
   width: 50%;
+  flex: 1 1 300px;
 }
 .about-us .container .img-and-text .text p span {
   font-weight: bold;
@@ -289,69 +291,108 @@ header .container .auth-btn a:hover {
   color: var(--dark-grey);
   font-size: 20px;
 }
-.doctors .container .doctors-card-container{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    /* margin-bottom: 50px; */
+.doctors .container .doctors-card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* margin-bottom: 50px; */
 }
-.doctors .container .doctors-card-container li{
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+.doctors .container .doctors-card-container li {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
-.doctors .container .doctors-card-container li .doctor-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.doctors .container .doctors-card-container li .doctor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-.doctors .container .doctors-card-container li .doctor-details{
-    padding: 20px;
+.doctors .container .doctors-card-container li .doctor-details {
+  padding: 20px;
 }
-.doctors .container .doctors-card-container li .doctor-details .title{
-    color: var(--dark-grey);
-    font-weight: 400;
+.doctors .container .doctors-card-container li .doctor-details .title {
+  color: var(--dark-grey);
+  font-weight: 400;
 }
-.doctors .container .doctors-card-container li .doctor-details .name{
-    color: var(--dark);
-    font-weight: 500;
-    margin-bottom: 13px;
+.doctors .container .doctors-card-container li .doctor-details .name {
+  color: var(--dark);
+  font-weight: 500;
+  margin-bottom: 13px;
 }
-.doctors .container .doctors-card-container li .doctor-details p{
-    color: var(--light-grey);
-    font-size: 13px;
-    margin-bottom: 13px;
+.doctors .container .doctors-card-container li .doctor-details p {
+  color: var(--light-grey);
+  font-size: 14px;
+  margin-bottom: 13px;
 }
-.doctors .container .doctors-card-container li .doctor-details div{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #aa003c;
+.doctors .container .doctors-card-container li .doctor-details div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #aa003c;
 }
-.doctors .container .doctors-card-container li .doctor-details div p{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-color: #1e9dc4;
+.doctors .container .doctors-card-container li .doctor-details div p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #1e9dc4;
 }
-.extra-space{
-    padding: 12px;
+.extra-space {
+  /* padding: 12px; */
 }
-.doctors .container .doctors-card-container li .views-and-book-btn{
-    border-top: 1px solid var(--light-grey);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.doctors .container .doctors-card-container li .views-and-book-btn {
+  border-top: 1px solid #8d8d8d56;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
-.doctors .container .doctors-card-container li .views-and-book-btn .views{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
-    padding-left: 20px;
+.doctors .container .doctors-card-container li .views-and-book-btn .views {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.doctors .container .doctors-card-container li .views-and-book-btn .views p {
+  color: var(--light-grey);
+  font-weight: bold;
+  font-size: 13px;
+}
+.doctors
+  .container
+  .doctors-card-container
+  li
+  .views-and-book-btn
+  .book-btn
+  a:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.doctors .container .doctors-card-container li .views-and-book-btn .book-btn a {
+  padding: 6px 8px;
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 13px;
+}
+.doctors .container .view-all-doctor-btn {
+  padding: 10px 14px;
+  margin-top: 15px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  border: 1px solid var(--primary);
+}
+.doctors .container .view-all-doctor-btn:hover {
+  background-color: var(--white);
+  color: var(--primary);
 }
