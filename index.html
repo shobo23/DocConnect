@@ -14,7 +14,7 @@
         <div class="logo">
           <a href="#"><img src="images/brand-icon-name.png" alt="logo" /></a>
         </div>
-        <nav>
+        <nav id="nav-bar">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -23,9 +23,10 @@
             <li><a href="dashboard.html">Dashboard</a></li>
           </ul>
         </nav>
-        <div class="auth-btn">
+        <div id="auth-btn" class="auth-btn">
           <a class="login-btn" href="login.html">Login</a>
           <a class="signUp" href="signUp.html">Sign Up</a>
+          <img id="burger_menu" src="images/burger_menu.png" alt="toggle menu">
         </div>
       </div>
     </header>
@@ -164,7 +165,6 @@
                         <h3 class="title">PSICOLOGIST</h3>
                         <h3 class="name">Dr. Chijioke Nnamdi</h3>
                         <p>Dedicated to improving mental resilience with a focus on mindfulness and cognitive therapy.</p>
-                        <div class="extra-space"></div>
                         <div>
                             <img src="images/review_stars.png" alt="review stars">
                             <p>(145)</p>
@@ -185,5 +185,32 @@
             <a class="view-all-doctor-btn" href="#">View all Doctors</a>
         </div>
       </section>
+      <!-- Find your doctor or clinic-->
+      <section class="locate-doctors">
+        <div class="container">
+            <div class="top-text">
+                <h2>FIND YOUR DOCTOR OR CLINIC</h2>
+                <p>Quickly locate top-rated doctors and clinics near you or explore by medical specialties for expert care.</p>
+            </div>
+            <div class="zone-type-container">
+                <ul class="zone">
+                    <li class="zone-header">
+                        <img src="images/location_icon.png" alt="zone icon">
+                        <p>Search by State</p>
+                    </li>
+                    <li>
+
+                    </li>
+                </ul>
+                <ul class="type">
+                    <li class="type-header">
+                        <img src="images/type_icon.png" alt="document icon">
+                        <p>Search by Type</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <script src="script.js"></script>
   </body>
 </html>

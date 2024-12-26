@@ -91,6 +91,33 @@ header .container .auth-btn a:hover {
   color: var(--primary);
   border: 1px solid var(--primary);
 }
+header .container .auth-btn img {
+  display: none;
+}
+/*header responsiveness for screen  < or = 768px TABLETS*/
+@media (max-width: 768px) {
+  header .container .logo {
+    width: 110px;
+  }
+  header .container nav ul,
+  header .container .auth-btn a {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    width: 100vw;
+    right: 0;
+    padding: 16px 0;
+    height: calc(100vh - 42px);
+  }
+  header .container nav ul.show {
+    display: flex;
+  }
+  header .container .auth-btn img {
+    display: block;
+    width: 40px;
+  }
+}
 /* hero section */
 .hero-page {
   background-image: url("images/hero-img.jpg");
@@ -139,6 +166,40 @@ header .container .auth-btn a:hover {
   background-color: var(--white);
   color: var(--primary);
 }
+/*hero section responsiveness for screen  < or = 768px TABLETS*/
+@media (max-width: 768px) {
+  .hero-page .container h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .hero-page .container p {
+    font-size: 18px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+}
+/*hero section responsiveness for screen  < or = 575px PHONE*/
+@media screen and (max-width: 575px) {
+  .hero-page .container h1 {
+    font-size: 17px;
+    text-align: center;
+  }
+  .hero-page .container p {
+    font-size: 12px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  .hero-page .container a {
+    padding: 10px 15px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 12px;
+  }
+}
+
 /* about section */
 .about-us {
   padding: 60px 0px;
@@ -165,11 +226,9 @@ header .container .auth-btn a:hover {
   gap: 20px;
   color: var(--dark);
   font-size: 17px;
-  flex-wrap: wrap;
 }
 .about-us .container .img-and-text .about-image {
-  width: 50%;
-  flex: 1 1 300px;
+  width: 100%;
 }
 .about-us .container .img-and-text .about-image img {
   width: 100%;
@@ -180,14 +239,31 @@ header .container .auth-btn a:hover {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 50%;
-  flex: 1 1 300px;
+  width: 100%;
 }
 .about-us .container .img-and-text .text p span {
   font-weight: bold;
 }
 .about-us .container .img-and-text .text div p span {
   font-style: italic;
+}
+/*hero section responsiveness for screen  < or = 575px PHONE*/
+@media screen and (max-width: 575px) {
+  .about-us .container .top-text {
+    text-align: center;
+  }
+  .about-us .container .top-text h2 {
+    font-size: 22px;
+  }
+  .about-us .container .top-text p {
+    font-size: 14px;
+  }
+  .about-us .container .img-and-text {
+    flex-wrap: wrap;
+  }
+  .about-us .container .img-and-text .text {
+    font-size: 12px;
+  }
 }
 /* appointment step section */
 .appointment-section {
@@ -268,6 +344,21 @@ header .container .auth-btn a:hover {
   background-color: var(--white);
   color: var(--primary);
 }
+/*appointment section responsiveness for screen  < or = 768px TABLETS*/
+@media (max-width: 768px) {
+  .appointment-section .container .top-text {
+    text-align: center;
+  }
+}
+/*appointment section responsiveness for screen  < or = 575px PHONE*/
+@media screen and (max-width: 575px) {
+  .appointment-section .container .top-text h2 {
+    font-size: 24px;
+  }
+  .appointment-section .container .top-text p {
+    font-size: 14px;
+  }
+}
 /* most contact doctors */
 .doctors {
   padding: 60px 0px;
@@ -295,7 +386,6 @@ header .container .auth-btn a:hover {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  /* margin-bottom: 50px; */
 }
 .doctors .container .doctors-card-container li {
   flex: 1 1 300px;
@@ -339,9 +429,6 @@ header .container .auth-btn a:hover {
   align-items: center;
   text-align: center;
   background-color: #1e9dc4;
-}
-.extra-space {
-  /* padding: 12px; */
 }
 .doctors .container .doctors-card-container li .views-and-book-btn {
   border-top: 1px solid #8d8d8d56;
@@ -395,4 +482,55 @@ header .container .auth-btn a:hover {
 .doctors .container .view-all-doctor-btn:hover {
   background-color: var(--white);
   color: var(--primary);
+}
+/*most contacted doctor section responsiveness for screen  < or = 575px PHONE*/
+@media screen and (max-width: 575px) {
+  .doctors .container .view-all-doctor-btn {
+    font-size: 12px;
+  }
+}
+/* Find your doctor or clinic */
+.locate-doctors {
+  background-color: var(--light);
+  padding: 60px 0px;
+}
+.locate-doctors .container .top-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.locate-doctors .container .top-text h2 {
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 30px;
+}
+.locate-doctors .container .top-text p {
+  color: var(--light-grey);
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+.locate-doctors .container .zone-type-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.locate-doctors .container .zone-type-container .zone .zone-header {
+  background-color: var(--secondary);
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 20px;
+  padding: 30px 130px;
+}
+.locate-doctors .container .zone-type-container .type .type-header {
+  background-color: var(--secondary);
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 20px;
+  padding: 33px 130px;
 }
