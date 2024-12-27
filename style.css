@@ -518,19 +518,106 @@ header .container .auth-btn img {
   gap: 30px;
   flex-wrap: wrap;
 }
-.locate-doctors .container .zone-type-container .zone .zone-header {
+.locate-doctors .container .zone-type-container .zone-container, .locate-doctors .container .zone-type-container .type-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.locate-doctors .container .zone-type-container .zone-container .zone-header {
   background-color: var(--secondary);
   border-radius: 8px;
   color: var(--white);
   font-weight: 500;
   font-size: 20px;
   padding: 30px 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
-.locate-doctors .container .zone-type-container .type .type-header {
+.locate-doctors .container .zone-type-container .type-container .type-header {
   background-color: var(--secondary);
   border-radius: 8px;
   color: var(--white);
   font-weight: 500;
   font-size: 20px;
   padding: 33px 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
+.state, .type{
+    background-color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+}
+.state:hover, .type:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 1px 1px;
+}
+.locate-doctors .container .zone-type-container .zone-container .state .left-part, .locate-doctors .container .zone-type-container .type-container .type .left-part{
+    display: flex;
+    gap: 5px;
+}
+.locate-doctors .container .zone-type-container .zone-container .state .left-part .state-number, .locate-doctors .container .zone-type-container .type-container .type .left-part .type-number{
+    background-color: var(--light);
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--light-grey);
+}
+.locate-doctors .container .zone-type-container .zone-container .state .left-part p, .locate-doctors .container .zone-type-container .type-container .type .left-part p{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+}
+/* testimonial section */
+.testimonial-section {
+    padding: 60px 0px;
+}
+.testimonial-section .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+.testimonial-section .container .top-text h2{
+    color: var(--dark);
+    font-size: 22px;
+    font-weight: 600;
+}
+.testimonial-section .container .top-text p{
+    color: var(--light-grey);
+    font-size: 30px;
+}
+.testimonial-section .container .carousel{
+    display: flex;
+    padding: 0px 100px;
+}
+.testimonial-section .container .carousel .name{
+    font-weight: 500;
+    color: var(--primary);
+}
+.testimonial-section .container .carousel .scrool-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonial-section .container .carousel .testimonial-text{
+    padding: 0px 100px;
+    font-size: 24px;
+    color: var(--light-grey);
+    margin-top: -20px;
+}
+/* contact us section */
