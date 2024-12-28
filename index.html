@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DocConnect</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- header section -->
@@ -17,9 +21,9 @@
         <nav id="nav-bar">
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#doctors">Services</a></li>
+            <li><a href="#contact-us">Contact</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
           </ul>
         </nav>
@@ -38,16 +42,16 @@
     <main class="hero-page">
       <div class="overlay"></div>
       <div class="container">
-        <h1>Simplify Your Healthcare Journey</h1>
+        <h1>Seamless Healthcare, One Click Away</h1>
         <p>
-          Track your health, manage prescriptions, and stay informed with our
-          intuitive healthcare platform.
+          Connect with trusted doctors, schedule appointments, and manage your
+          health effortlessly with DocConnect.
         </p>
         <a class="appointment" href="appointment.html">Book an Appointment</a>
       </div>
     </main>
     <!-- about section -->
-    <section class="about-us">
+    <section id="about-us" class="about-us">
       <div class="container">
         <div class="top-text">
           <h2>About DocConnect</h2>
@@ -61,21 +65,21 @@
           </div>
           <div class="text">
             <p>
-              At <span>DocConnect</span>, we are committed to revolutionizing
-              healthcare by making it simple, efficient, and accessible for
-              everyone. Our platform connects you with trusted doctors and
-              clinics tailored to your specific needs.
+              At <span>DocConnect</span>, we are transforming the way healthcare
+              works by ensuring it is easy, fast, and accessible for everyone.
+              Our platform bridges the gap between patients and top-rated
+              doctors, offering personalized care options tailored to your
+              needs.
             </p>
             <p>
-              Whether you're looking for a general practitioner, a specialist,
-              or the nearest clinic, we provide a seamless way to find and book
-              the right care.With a focus on innovation and reliability, we
-              strive to eliminate the barriers between patients and healthcare
-              providers. At <span>DocConnect</span>, your health and convenience
-              come first.
+              From booking appointments with specialists to managing routine
+              check-ups, we provide a user-friendly experience that prioritizes
+              your well-being. With a focus on trust and convenience,
+              <span>DocConnect</span> eliminates the hassle of traditional
+              healthcare, putting you in control of your health journey.
             </p>
             <div>
-              <p><span>“Connecting healthcare, one click at a time.”</span></p>
+              <p><span>“Empowering lives, one appointment at a time”</span></p>
               <p>— CEO, Shobo Muhammed</p>
             </div>
           </div>
@@ -127,7 +131,7 @@
       </div>
     </section>
     <!-- most contact doctors -->
-    <section class="doctors">
+    <section id="doctors" class="doctors">
       <div class="container">
         <div class="top-text">
           <h2>MOST CONTACTED DOCTORS</h2>
@@ -229,7 +233,7 @@
       </div>
     </section>
     <!-- Find your doctor or clinic-->
-    <section class="locate-doctors">
+    <section id="locate-doctors" class="locate-doctors">
       <div class="container">
         <div class="top-text">
           <h2>FIND YOUR DOCTOR OR CLINIC</h2>
@@ -367,48 +371,126 @@
           <h2>Testimonial</h2>
           <p>What Our Users Are Saying</p>
         </div>
-
-        <div class="carousel">
-          <div>
-            <div class="user-info">
-              <div class="user-image">
-                <img
-                  src="images/testimonial_image.png"
-                  alt="Ahmed Bello's image"
-                />
+        <div class="carouse-container">
+          <img class="scrool-left" src="images/left_icon.png" alt="left icon" />
+          <div class="carousel">
+            <div>
+              <div class="user-info">
+                <div class="user-image">
+                  <img
+                    src="images/testimonial_image.png"
+                    alt="Ahmed Bello's image"
+                  />
+                </div>
+                <p class="name">Ahmed Bello</p>
               </div>
-              <p class="name">Ahmed Bello</p>
+              <div class="scrool-icons"></div>
+              <p class="testimonial-text">
+                I used DocConnect to book an appointment with a specialist I
+                couldn't find on my own here in Kano. The platform not only
+                helped me locate the right doctor, but it also provided me with
+                all the necessary details, including fees, location, and patient
+                reviews. It made the entire experience so much more convenient
+                and hassle-free.
+              </p>
             </div>
-            <div class="scrool-icons">
-              <img
-                class="scrool-left"
-                src="images/left_icon.png"
-                alt="left icon"
-              />
-              <img
-                class="scrool-right"
-                src="images/right_icon.png"
-                alt="right icon"
-              />
-            </div>
-            <p class="testimonial-text">
-              I used DocConnect to book an appointment with a specialist I
-              couldn't find on my own here in Kano. The platform not only helped
-              me locate the right doctor, but it also provided me with all the
-              necessary details, including fees, location, and patient reviews.
-              It made the entire experience so much more convenient and
-              hassle-free.
-            </p>
           </div>
+          <img
+            class="scrool-right"
+            src="images/right_icon.png"
+            alt="right icon"
+          />
         </div>
       </div>
     </section>
     <!-- contact us section -->
-    <section class="contact-us">
-        <div class="container">
-            
+    <section id="contact-us" class="contact-us">
+      <div class="container">
+        <div class="top-text">
+          <h2>Contact Us</h2>
+          <p>We'd love to hear from you! Reach out to us for inquiries.</p>
         </div>
+        <div class="form-container">
+          <form action="#">
+            <div class="fullname">
+              <label for="fullname">Fullname:</label>
+              <input type="text" name="fullname" id="fullname" />
+            </div>
+            <div class="email">
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div class="subject">
+              <label for="subject">Subject:</label>
+              <input type="text" name="subject" id="subject"/>
+            </div>
+            <div class="message">
+              <label for="message">Message:</label>
+              <textarea name="message" id="message"></textarea>
+            </div>
+            <div class="contact-Btn"><button type="submit">Submit</button></div>
+          </form>
+          <div class="nurse">
+            <img src="images/contact_nurse.png" alt="Our Secertery Nurse" />
+          </div>
+        </div>
+      </div>
     </section>
+    <footer>
+      <div class="container">
+        <div class="top-footer">
+          <div class="footer-logo">
+            <a href="#"><img src="images/brand-icon-name.png" alt="logo" /></a>
+          </div>
+          <ul class="footer-about">
+            <h4>ABOUT</h4>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signUp.html">Register</a></li>
+          </ul>
+          <ul class="footer-useful-links">
+            <h4>USEFUL LINKS</h4>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#locate-doctors">Clinics</a></li>
+            <li><a href="#">Specialization</a></li>
+            <li><a href="#">Join as a Doctor</a></li>
+            <li><a href="#">Download App</a></li>
+          </ul>
+          <div>
+            <ul class="fotter-contact">
+              <h4>Contact with us</h4>
+              <li>
+                <i class="bx bxs-phone"></i>
+                <p>+234 700 362-2666</p>
+              </li>
+              <li>
+                <i class="bx bx-envelope"></i>
+                <p>help@docconnect.com</p>
+              </li>
+            </ul>
+            <ul class="fotter-socials">
+              <h4>Follow</h4>
+              <li>
+                <i class="bx bxl-facebook"></i>
+                <i class="bx bxl-twitter"></i>
+                <i class="bx bxl-linkedin"></i>
+                <i class="bx bxl-instagram"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-footer">
+          <div class="left-part">
+            <p>Created by Shobo Muhammed</p>
+          </div>
+          <div class="right-part">
+            <p>&copy; DocConnect</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
