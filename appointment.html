@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Appointment Page</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
-    <link rel="stylesheet" href="appointment.css">
-</head>
-<body>
-    
-</body>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="appointment.css" />
+  </head>
+  <body>
+    <div class="general-container">
+      <div class="logo">
+        <a href="index.html"><img src="images/brand-icon-name.png" alt="DocConnect Logo" /></a>
+      </div>
+      <div class="form-container">
+        <div class="form-background">
+          <h1>Doctor Appointment Request Form</h1>
+          <form action="#">
+            <div class="fullname">
+              <label for="fullname">Fullname:</label>
+              <input type="text" name="fullname" id="fullname" />
+            </div>
+            <div class="email">
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div class="phone">
+              <label for="phone">Phone:</label>
+              <input type="tel" name="phone" id="phone" />
+            </div>
+            <div class="date">
+              <label for="date">Preferred Date:</label>
+              <input type="date" name="date" id="date" />
+            </div>
+            <div class="detail">
+              <label for="detail">Details:</label>
+              <textarea name="detail" id="detail"></textarea>
+            </div>
+            <button type="submit">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

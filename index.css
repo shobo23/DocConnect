@@ -97,60 +97,41 @@ header .container .auth-btn a:hover {
   color: var(--primary);
   border: 1px solid var(--primary);
 }
-header .container .auth-btn img {
+header .container #burger_menu {
   display: none;
 }
-/*header responsiveness for screen  < or = 768px TABLETS*/
+/*header responsiveness for screen ≤ 768px (TABLETS)*/
 @media (max-width: 768px) {
-  /* header .container .logo {
+  header .container .logo {
     width: 110px;
   }
   header .container nav ul,
-  header .container .auth-btn a {
+  header .container .auth-btn {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    width: 100vw;
-    right: 0;
-    padding: 16px 0;
-    height: calc(100vh - 42px);
   }
-  header .container nav ul.show {
+
+  /* When "show" class is toggled, make them visible */
+  header .container nav ul.show,
+  header .container .auth-btn.show {
     display: flex;
-  }
-  header .container .auth-btn img {
-    display: block;
-    width: 40px;
-  } */
-  header .container nav ul {
-    display: none; /* Hide the navigation links */
     flex-direction: column;
-    gap: 15px;
-    background: var(--white);
     position: absolute;
-    top: 100%;
+    top: 60px; /* Below the header */
     right: 0;
+    background-color: var(--white);
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
-    padding: 10px 20px;
+    /* height: calc(100vh); */
     z-index: 1000;
+    padding: 16px 0;
+    align-items: center;
   }
-
-  header .container .auth-btn a {
-    display: none;
-  }
-
-  header .container .auth-btn img {
-    display: block; /* Show the burger menu */
+  header .container #burger_menu {
+    display: block;
     width: 30px;
     cursor: pointer;
   }
-
-  header .container nav ul.active {
-    display: flex; /* Show the nav links when active */
-  }
 }
+
 /* hero section */
 .hero-page {
   background-image: url("images/doctor-is-writing-clipboard-with-pregnant-mother_94347-1381.jpg");
@@ -461,14 +442,12 @@ header .container .auth-btn img {
   display: flex;
   align-items: center;
   gap: 10px;
-  /* background-color: #aa003c; */
 }
 .doctors .container .doctors-card-container li .doctor-details div p {
   display: flex;
   align-items: center;
   text-align: center;
   margin-bottom: -5px;
-  /* background-color: #1e9dc4; */
 }
 .doctors .container .doctors-card-container li .views-and-book-btn {
   border-top: 1px solid #8d8d8d56;
@@ -523,7 +502,7 @@ header .container .auth-btn img {
   background-color: var(--white);
   color: var(--primary);
 }
-/*/*most contacted doctor section responsiveness for screen  < or = 575px PHONE*/
+/*most contacted doctor section responsiveness for screen  < or = 768px TABLET*/
 @media (max-width: 768px) {
   .doctors .container .top-text h2 {
     font-size: 22px;
@@ -536,7 +515,23 @@ header .container .auth-btn img {
     justify-content: center;
     align-items: center;
   }
+  .doctors .container .doctors-card-container .last-doc,
+  #last-doc {
+    margin: 0px 180px;
+  }
 }
+/*most contacted doctor section responsiveness for screen  < or = 575px PHONE*/
+@media (max-width: 575px) {
+  .doctors .container .doctors-card-container .last-doc,
+  #last-doc {
+    margin: 0px;
+  }
+  .doctors .container .view-all-doctor-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
 /* Find your doctor or clinic */
 .locate-doctors {
   background-color: var(--light);
@@ -925,7 +920,18 @@ textarea {
     text-align: center;
   }
   label {
-    font-size: 16px;
+    font-size: 12px;
+  }
+  input {
+    height: 40px;
+  }
+  textarea {
+    height: 80px;
+  }
+  .contact-Btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .nurse {
     width: 100px;
@@ -967,6 +973,9 @@ footer .container .fotter-socials li {
   align-items: center;
   gap: 8px;
 }
+footer .container .fotter-socials li p {
+  color: var(--dark-grey);
+}
 footer .container .fotter-contact li i {
   font-size: 25px;
   color: var(--primary);
@@ -994,21 +1003,23 @@ footer .container .fotter-socials li i:hover {
   .top-footer {
     padding: 25px 0px 15px 0px;
   }
-  footer .container .top-footer{
+  footer .container .top-footer {
     display: flex;
     flex-direction: column;
   }
-  footer .container ul li a,  footer .container ul li p{
+  footer .container ul li a,
+  footer .container ul li p {
     font-size: 14px;
   }
   footer .container .footer-logo {
     width: 120px;
   }
   footer .container ul {
-  margin-bottom: 25px;
-}
-.bottom-footer {
-  display: flex;
-  flex-direction: column;
-}
+    margin-bottom: 25px;
+  }
+  .bottom-footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+  }
 }
