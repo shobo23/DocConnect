@@ -1,60 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
-    <link rel="stylesheet" href="dashboard.css">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
     <!-- sidebar -->
-     <aside>
+    <aside>
+      <div class="container">
         <div class="side-nav">
-            <div class="logo">
-                <a href="index.html"><img src="images/brand-icon-name.png" alt="DocConnect logo"></a>
-            </div>
-            <ul>
-                <li>
-                    <span class="material-symbols--dashboard"></span>
-                    <span>Dashboard</span>
-                </li>
-                <li>
-                    <span class="maki--doctor"></span>
-                    <span>Doctor</span>
-                </li>
-                <li>
-                    <span class="mdi--person"></span>
-                    <span>Patient</span>
-                </li>
-                <li>
-                    <span class="mingcute--department-fill"></span>
-                    <span>Department</span>
-                </li>
-                <li>
-                    <span class="fluent-mdl2--date-time"></span>
-                    <span>Doctor Schedule</span>
-                </li>
-                <li>
-                    <span class="ic--outline-check-box"></span>
-                    <span>Appointment</span>
-                </li>
-                <li>
-                    <span class="uil--setting"></span>
-                    <span>Setting</span>
-                </li>
-                <li>
-                    <span class="uil--signout"></span>
-                    <span>Sign Out</span>
-                </li>
-            </ul>
+          <div class="logo">
+            <a href="index.html"
+              ><img src="images/brand-icon-name.png" alt="DocConnect logo"
+            /></a>
+          </div>
+          <ul class="side-nav-ul">
+            <li class="side">
+              <span class="material-symbols--dashboard"></span>
+              <span>Dashboard</span>
+            </li>
+            <li class="side">
+              <span class="maki--doctor"></span>
+              <span>Doctor</span>
+            </li>
+            <li class="side">
+              <span class="mdi--person"></span>
+              <span>Patient</span>
+            </li>
+            <li class="side">
+              <span class="mingcute--department-fill"></span>
+              <span>Department</span>
+            </li>
+            <li class="side">
+              <span class="fluent-mdl2--date-time"></span>
+              <span>Doctor Schedule</span>
+            </li>
+            <li class="side">
+              <span class="ic--outline-check-box"></span>
+              <span>Appointment</span>
+            </li>
+            <li class="side">
+              <span class="uil--setting"></span>
+              <span>Setting</span>
+            </li>
+            <li class="side">
+              <span class="uil--signout"></span>
+              <span>Sign Out</span>
+            </li>
+          </ul>
         </div>
-     </aside>
+      </div>
+    </aside>
 
-     <header>
-        <div class="top-bar">
-            
+    <header>
+      <div class="top-bar">
+        <div class="burger-menu">
+          <span class="material-symbols--menu-rounded"></span>
         </div>
-     </header>
-</body>
+        <ul class="top-bar-nav">
+          <li>
+            <span class="healthicons--i-schedule-school-date-time"></span>
+            <span>Make an appointment</span>
+          </li>
+          <li>
+            <span class="ph--pen-light"></span>
+            <span>Write a presciption</span>
+          </li>
+          <li>
+            <span class="oui--app-reporting"></span>
+            <span>Generate Report</span>
+          </li>
+          <li>
+            <span class="ci--bell"></span>
+          </li>
+          <li class="admin-container">
+            <img src="images/dr.Samuel_Admin.png" alt="Admin Image" />
+            <p class="sam">Dr.Samuel</p>
+            <p class="Admin">Admin</p>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- cards -->
+      <div class="card-container">
+        <div class="card">
+          <div class="left-part">
+            <span>DOCTORS</span>
+            <span>26</span>
+          </div>
+          <div class="right-part">
+            <span class="maki--doctor2"></span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="left-part">
+            <span>NURSES</span>
+            <span>68</span>
+          </div>
+          <div class="right-part">
+            <span class="healthicons--nurse"></span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="left-part">
+            <span>PATIENT</span>
+            <span>118</span>
+          </div>
+          <div class="right-part">
+            <span class="medical-icon--i-outpatient"></span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="left-part">
+            <span>PHARMACIST</span>
+            <span>17</span>
+          </div>
+          <div class="right-part">
+            <span class="iconoir--pharmacy-cross-tag"></span>
+          </div>
+        </div>
+      </div>
+        <!-- registered users -->
+        <div class="users-container">
+          <div class="title">
+            <h2 class="registered-user-title">User's Informations</h2>
+          </div>
+          <table id="registered-user-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody id="registered-user-table-body">
+              <!-- <tr>
+                <td>James</td>
+                <td>James@gmail.com</td>
+                <td>08131117520</td>
+              </tr> -->
+              <!-- <tr>
+                <td>Willaims</td>
+                <td>Willaims@gmail.com</td>
+                <td>08131117520</td>
+              </tr>
+              <tr>
+                <td>Wale</td>
+                <td>Wale@gmail.com</td>
+                <td>08131117520</td>
+              </tr>
+              <tr>
+                <td>Wesley</td>
+                <td>Wesley@gmail.com</td>
+                <td>08131117520</td>
+              </tr>
+              <tr>
+                <td>Janet</td>
+                <td>Janet@gmail.com</td>
+                <td>08131117520</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+        <!-- patient appointment info -->
+        <div class="users-container">
+          <div class="title">
+            <h2 class="registered-user-title">Patient Appointment Info</h2>
+          </div>
+          <table id="appointment-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Detail</th>
+              </tr>
+            </thead>
+            <tbody id="appointment-table-body">
+              <!-- <tr>
+                <td>Chinedu Okafor</td>
+                <td>chinedu@gmail.com</td>
+                <td>08012345678</td>
+                <td>2024-12-26</td>
+                <td>Follow-up on labs.</td>
+              </tr>
+              <tr>
+                <td>Amina Abdullahi</td>
+                <td>amina@yahoo.com</td>
+                <td>08023456789</td>
+                <td>2024-12-27</td>
+                <td>General consultation.</td>
+              </tr>
+              <tr>
+                <td>Temidayo Balogun</td>
+                <td>temidayo@mail.com</td>
+                <td>08034567890</td>
+                <td>2024-12-28</td>
+                <td>Flu symptoms check.</td>
+              </tr>
+              <tr>
+                <td>Uchenna Nwankwo</td>
+                <td>uchenna@gmail.com</td>
+                <td>08045678901</td>
+                <td>2024-12-29</td>
+                <td>Eye specialist visit.</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+
+        </div>
+      </div>
+    </main>
+    <script src="dashboard.js"></script>
+  </body>
 </html>

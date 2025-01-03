@@ -20,7 +20,7 @@
           <div class="top-info">
             <h1>Sign Up for DocConnect</h1>
           </div>
-          <form action="#">
+          <form onsubmit="SignUpForm(event)">
             <div class="fullname">
               <label for="fullname">Fullname:</label>
               <input type="text" name="fullname" id="fullname" />
@@ -50,5 +50,7 @@
         <img src="images/form_image.jpg" alt="Image of a doctor." />
       </div>
     </div>
+    <script src="signUp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

@@ -15,27 +15,27 @@
     <!-- header section -->
     <header>
       <div class="container">
+        <!-- Logo -->
         <div class="logo">
-          <a href="#"><img src="images/brand-icon-name.png" alt="logo" /></a>
+          <a href="#"><img src="images/brand-icon-name.png" alt="DocConnect Logo" /></a>
         </div>
-        <nav id="nav-bar">
-          <ul>
+        <!-- Navigation -->
+        <nav>
+          <ul id="nav-bar">
             <li><a href="#">Home</a></li>
             <li><a href="#about-us">About</a></li>
             <li><a href="#doctors">Services</a></li>
             <li><a href="#contact-us">Contact</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
           </ul>
+          <!-- Authentication Buttons -->
+          <div id="auth-btn" class="auth-btn">
+            <a class="login-btn" href="login.html">Login</a>
+            <a class="signUp" href="signUp.html">Sign Up</a>
+          </div>
         </nav>
-        <div id="auth-btn" class="auth-btn">
-          <a class="login-btn" href="login.html">Login</a>
-          <a class="signUp" href="signUp.html">Sign Up</a>
-        </div>
-        <img
-          id="burger_menu"
-          src="images/burger_menu.png"
-          alt="toggle menu"
-        />
+        <!-- Toggle Menu (Burger Icon) -->
+        <span class="toggle-menu"></span>
       </div>
     </header>
     <!-- hero section -->
@@ -414,19 +414,19 @@
           <form action="#">
             <div class="fullname">
               <label for="fullname">Fullname:</label>
-              <input type="text" name="fullname" id="fullname" />
+              <input type="text" name="fullname" id="fullname" required/>
             </div>
             <div class="email">
               <label for="email">Email:</label>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" required/>
             </div>
             <div class="subject">
               <label for="subject">Subject:</label>
-              <input type="text" name="subject" id="subject"/>
+              <input type="text" name="subject" id="subject" required/>
             </div>
             <div class="message">
               <label for="message">Message:</label>
-              <textarea name="message" id="message"></textarea>
+              <textarea name="message" id="message" required></textarea>
             </div>
             <div class="contact-Btn"><button type="submit">Submit</button></div>
           </form>
