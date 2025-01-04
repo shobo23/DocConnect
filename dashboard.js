@@ -1,5 +1,5 @@
 // Retrieve the users array from localStorage
-const Users = JSON.parse(localStorage.getItem("user1"));
+const Users = JSON.parse(localStorage.getItem("user"));
 
 // Get the table body element
 const RegisteredUserTableBody = document.getElementById(
@@ -36,7 +36,7 @@ Users.forEach( (user) => {
 });*/
 
 
-// Retrieve the users array from localStorage
+// Retrieve the appointment array from localStorage
 const Appointment = JSON.parse(localStorage.getItem("appointments"));
 
 // Get the table body element

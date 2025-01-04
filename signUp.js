@@ -13,18 +13,18 @@ const SignUpForm = (event) => {
   ) {
     //check if input has data
 
-    if (localStorage.getItem("user1")) {  // chech if data exist already in the local storage
-      var user_list = JSON.parse(localStorage.getItem("user1"));
+    if (localStorage.getItem("user")) {  // chech if data exist already in the local storage
+      var user_list = JSON.parse(localStorage.getItem("user"));
     } else {
       var user_list = [];
-      localStorage.setItem("user1", JSON.stringify(user_list));
+      localStorage.setItem("user", JSON.stringify(user_list));
     }
 
     const UserId = { SignUpFullname, SignUpEmail, SignUpPhone, SignUpPassword };
     user_list.push(UserId);
 
     // store to local storage
-    localStorage.setItem("user1", JSON.stringify(user_list));
+    localStorage.setItem("user", JSON.stringify(user_list));
 
     Swal.fire({
       title: "Registration Successful",
@@ -32,7 +32,7 @@ const SignUpForm = (event) => {
       icon: "success",
       confirmButtonText: "OK",
     }).then(() => {
-      window.location.href = "dashboard.html";
+      window.location.href = "login.html";
     });
   } else {
     Swal.fire({
